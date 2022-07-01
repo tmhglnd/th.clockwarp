@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="th.clockwarp~">
+
+	<digest>
+		Warp a phasor~ in many ways
+	</digest>
+
+	<description>
+		Subdivide or multiply a phasor~ into faster or slower divisions, apply an offset to the clock compared to other clockwarps using the same phasor (or when synced to transport), add a rhythmic pattern with probabilities, add a ratcheting effect with probability and apply a pattern in the ratcheting. Reset the counter every n-division (adjustable). Syncable to the global transport when using a [phasor~ 1n @lock 1].
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Timo Hoogland</metadata>
+		<metadata name="tag">thModules</metadata>
+		<metadata name="tag">max</metadata>
+		<metadata name="tag">generative</metadata>
+		<metadata name="tag">rhythm</metadata>
+		<metadata name="tag">pattern</metadata>
+	</metadatalist>
+
+	<!--INLETS-->
+	<inletlist>
+		<!-- <inlet id="0" type="int">
+			<digest></digest>
+			<description></description>
+		</inlet> -->
+		<!-- <inlet id="1" type="signal">
+			<digest></digest>
+			<description></description>
+		</inlet> -->
+	</inletlist>
+
+	<!--OUTLETS-->
+	<outletlist>
+		<!-- <outlet id="0" type="int">
+			<digest></digest>
+			<description></description>
+		</outlet> -->
+		<!-- <outlet id="1" type="float">
+			<digest></digest>
+			<description></description>
+		</outlet> -->
+	</outletlist>
+
+	<!-- ARGUMENTS-->
+	<objarglist>
+		<objarg name="subdivision" optional="1" type="int">
+			<digest>
+				Divide the incoming phasor (default = 1/8)
+			</digest>
+			<description>
+				Divide the incoming phasor (default = 1/8)
+			</description>
+		</objarg>
+		<objarg name="offset" optional="1" type="int">
+			<digest>
+				Offset the incoming phasor (default = 0)
+			</digest>
+			<description>
+				Offset the incoming phasor (default = 0)
+			</description>
+		</objarg>
+		<objarg name="reset" optional="1" type="int">
+			<digest>
+				Reset the note count after n-division, or when 0 count infinitely (default = 0)
+			</digest>
+			<description>
+				Reset the note count after n-division, or when 0 count infinitely (default = 0)
+			</description>
+		</objarg>
+		<objarg name="ratchet" optional="1" type="float">
+			<digest>
+				Set the ratcheting probability (default = 0)
+			</digest>
+			<description>
+				Set the ratcheting probability (default = 0)
+			</description>
+		</objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="signal">
+			<arglist>
+				<arg name="signal" optional="1" type="bang" />
+			</arglist>
+			<digest>
+				The incoming phasor~ to warp.
+			</digest>
+			<description>
+				The incoming phasor~ to warp.
+			</description>
+		</method>
+		<method name="beatlist">
+			<arglist>
+				<arg name="beatlist" optional="1" type="int" />
+			</arglist>
+			<digest>
+				Provide a list of 0's and 1's as a rhythmic pattern
+			</digest>
+			<description>
+				Provide a list of 0's and 1's as a rhythmic pattern
+			</description>
+		</method>
+		<method name="ratchetlist">
+			<arglist>
+				<arg name="ratchetlist" optional="1" type="message" />
+			</arglist>
+			<digest>
+				Provide a list of integers as a ratcheting pattern
+			</digest>
+			<description>
+				Provide a list of integers as a ratcheting pattern
+			</description>
+		</method>
+		<method name="warplist">
+			<arglist>
+				<arg name="warplist" optional="1" type="message" />
+			</arglist>
+			<digest>
+				Provide a list of integers as a warping pattern
+			</digest>
+			<description>
+				Provide a list of integers as a warping pattern
+			</description>
+		</method>
+	</methodlist>
+
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<!-- <attribute name="seed" get='0' set='1' type='int' size='2'>
+			<arglist>
+				<arg name="seed" optional="1" type="message" />
+			</arglist>
+			<digest>
+				Set the seed for the psuedorandom number generator.
+			</digest>
+			<description>
+				Set the seed for the psuedorandom number generator.
+			</description>
+		</attribute> -->
+	</attributelist>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="th.clave"/>
+		<seealso name="th.euclid"/>
+		<seealso name="th.scala"/>
+		<seealso name="th."/>
+		<seealso name="jsui"/>
+	</seealsolist>
+</c74object>
