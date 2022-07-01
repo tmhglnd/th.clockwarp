@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 94.0, 88.0, 705.0, 737.0 ],
+		"rect" : [ 305.0, 104.0, 705.0, 737.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -57,7 +57,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 94.0, 114.0, 705.0, 711.0 ],
+						"rect" : [ 0.0, 26.0, 705.0, 711.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -121,7 +121,7 @@
 
 									}
 ,
-									"text" : "1 2 2",
+									"text" : "2 3 4",
 									"varname" : "textedit[2]"
 								}
 
@@ -2984,6 +2984,42 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-32",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 447.0, 205.5, 93.0, 47.0 ],
+									"text" : "wait till next cycle of phasor to set division"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-19",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 421.0, 220.0, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 421.0, 255.0, 48.0, 22.0 ],
+									"text" : "hold $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-17",
 									"maxclass" : "button",
 									"numinlets" : 1,
@@ -4872,6 +4908,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-5", 1 ],
 									"source" : [ "obj-11", 0 ]
 								}
@@ -4895,6 +4938,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-40", 1 ],
 									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"source" : [ "obj-19", 0 ]
 								}
 
 							}
@@ -8100,7 +8150,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 705.0, 711.0 ],
+						"rect" : [ 305.0, 130.0, 705.0, 711.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -9664,7 +9714,7 @@
 									"patching_rect" : [ 90.0, 226.0, 50.0, 22.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_initial" : [ 16 ],
+											"parameter_initial" : [ 8 ],
 											"parameter_initial_enable" : 1,
 											"parameter_invisible" : 1,
 											"parameter_longname" : "number[1]",

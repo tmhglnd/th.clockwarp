@@ -14,7 +14,7 @@ Create rhythms, subdivisions, probabilities and warping out of a single phasor~
 
 Subdivide or multiply a phasor~ into faster or slower divisions, apply an offset to the clock compared to other clockwarps using the same phasor (or when synced to transport), add a rhythmic pattern with probabilities, add a ratcheting effect with probability and apply a pattern in the ratcheting. Reset the counter every n-division (adjustable). Syncable to the global transport when using a [phasor~ 1n @lock 1]
 
-
+![](media/screenshot.png)
 
 ## Reference
 
