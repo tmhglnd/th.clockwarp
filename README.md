@@ -4,9 +4,11 @@ Create rhythms, subdivisions, probabilities and warping out of a single phasor~
 
 ## Support my projects
 
-**Consider to [name a fair price](http://gumroad.com/tmhglnd)**
+**Consider to [name a fair price](https://gumroad.com/tmhglnd)**
 
-**or [become a patron](http://patreon.com/timohoogland)**
+**Or [become a patron](https://patreon.com/timohoogland)**
+
+**Or [support me on ko-fi](https://ko-fi.com/tmhglnd)**
 
 ---
 
@@ -51,13 +53,13 @@ Subdivide or multiply a phasor~ into faster or slower divisions, apply an offset
 
 ```
 1. download zip
-2. unzip and place in Max Library (on MacOS ~/Documents/Max 8/Library)
+2. unzip and place in Max Library (on MacOS ~/Documents/Max 9/Library)
 3. restart Max9, open a new patcher
 ```
 or
 ```
 1. open terminal
-2. $ cd ~/Documents/Max\ 8/Library
+2. $ cd ~/Documents/Max\ 9/Library
 3. $ git clone https://github.com/tmhglnd/th.clockwarp.git
 4. restart Max9, open a new patcher
 ```
