@@ -116,6 +116,17 @@
 				Offset the incoming phasor (default = 0)
 			</description>
 		</method>
+		<method name="swing">
+			<arglist>
+				<arg name="swing" optional="1" type="float" />
+			</arglist>
+			<digest>
+				Set the swing percentage (default = 0.5)
+			</digest>
+			<description>
+				Set the swing percentage between 0.1 and 0.9. A value of 0.5 is 50% swing, is straight (default = 0.5). The swing is applied on the off-beat of the sequencer, depending on the subdivision. For instance, if the subdivision is 1/8, the swing is in 8th notes every 2nd 8th note. But if the division is 1/16, the swing works in 16th. If the subdivision is 3/16, the swing is applied to every odd dotted 8th-note.
+			</description>
+		</method>
 		<method name="reset">
 			<arglist>
 				<arg name="reset" optional="1" type="float" />
@@ -197,14 +208,58 @@
 				Set the triggering threshold (default = 0.9). Higher threshold can reduce accidental triggers when transport is started/stopped, but at a higher tempo it may also drop some triggers.
 			</description>
 		</attribute>
+		<attribute name="swing" get='0' set='1' type='float' size='1'>
+			<arglist>
+				<arg name="swing" optional="1" type="float" />
+			</arglist>
+			<digest>
+				Set the swing percentage (default = 0.5)
+			</digest>
+			<description>
+				Set the swing percentage between 0.1 and 0.9. A value of 0.5 is 50% swing, is straight (default = 0.5). The swing is applied on the off-beat of the sequencer, depending on the subdivision. For instance, if the subdivision is 1/8, the swing is in 8th notes every 2nd 8th note. But if the division is 1/16, the swing works in 16th. If the subdivision is 3/16, the swing is applied to every odd dotted 8th-note.
+			</description>
+		</attribute>
+		<attribute name="beatlist" get='0' set='1' type='list'>
+			<arglist>
+				<arg name="beatlist" optional="1" type="list" />
+			</arglist>
+			<digest>
+				Provide a list of 0's and 1's as a rhythmic pattern
+			</digest>
+			<description>
+				Provide a list of 0's and 1's as a rhythmic pattern
+			</description>
+		</attribute>
+		<attribute name="ratchetlist" get='0' set='1' type='list'>
+			<arglist>
+				<arg name="ratchetlist" optional="1" type="list" />
+			</arglist>
+			<digest>
+				Provide a list of integers as a ratcheting pattern
+			</digest>
+			<description>
+				Provide a list of integers as a ratcheting pattern
+			</description>
+		</attribute>
+		<attribute name="warplist" get='0' set='1' type='list'>
+			<arglist>
+				<arg name="warplist" optional="1" type="list" />
+			</arglist>
+			<digest>
+				Provide a list of integers as a warping pattern
+			</digest>
+			<description>
+				Provide a list of integers as a warping pattern
+			</description>
+		</attribute>
 	</attributelist>
 
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="th.clave"/>
 		<seealso name="th.euclid"/>
+		<seealso name="th.euclid~"/>
 		<seealso name="th.scala"/>
-		<seealso name="th."/>
 		<seealso name="jsui"/>
 	</seealsolist>
 </c74object>
